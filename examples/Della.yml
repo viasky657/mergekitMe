@@ -1,0 +1,24 @@
+models:
+  - model: models/fblgit/cybertron-v4-qw7B-MGS
+    parameters:
+      weight: 1.0
+  - model: models/THUDM/glm-4-voice-9b
+    parameters:
+      weight: 1.0
+  - model: models/allenai/Molmo-7B-D-0924
+    parameters:
+      weight: 1.0
+  - model: models/Qwen/Qwen2-VL-7B-Instruct
+    parameters:
+      weight: 1.0
+base_model: models/fblgit/cybertron-v4-qw7B-MGS
+merge_method: della
+parameters:
+  normalize: true
+  int8_mask: true
+  density: 0.7
+  lambda: 1.1
+  epsilon: 0.2
+dtype: float16
+
+
